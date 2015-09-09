@@ -42,6 +42,21 @@
         * Priority is adjustable
 
 #### Multiprocessor
+* Simple approach -> Single MFQ with LOCK
+	* Only one processor edits
+	* Problems:
+		* Contention: Bottleneck lock
+		* Cache Coherence: Slow caching and bottleneck
+		* Limited cache: Cache is less useful 
+* Per-processor structures 
+	* Affinity scheduling: Thread stays on processor
+		* Maximises cache reuse
+	* Rebalancing so processors aren’t idle
+
+#### Parallel 
+* Oblivious, previous schedulers 
+	* Problems:
+		* Bulk sync delay: 
 
 
 #### Citations 
